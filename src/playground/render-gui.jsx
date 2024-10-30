@@ -77,20 +77,34 @@ export default appTarget => {
         // important: this is checking whether `simulateScratchDesktop` is truthy, not just defined!
         simulateScratchDesktop ?
             <WrappedGui
-                canEditTitle
                 isScratchDesktop
                 showTelemetryModal
                 canSave={false}
+                canCreateNew={false}
+                canCreateCopy={false}
+                canEditTitle={false}
+                canShare={false}
+                enableCommunity={false}
+                canChangeTheme={false}
+                canChangeLanguage={false}
+
                 onTelemetryModalCancel={handleTelemetryModalCancel}
                 onTelemetryModalOptIn={handleTelemetryModalOptIn}
                 onTelemetryModalOptOut={handleTelemetryModalOptOut}
             /> :
             <WrappedGui
-                canEditTitle
                 backpackVisible
                 showComingSoon
                 backpackHost={backpackHost}
                 canSave={false}
+                canCreateNew={false}
+                canCreateCopy={false}
+                canEditTitle={false}
+                canShare={false}
+                enableCommunity={false}
+                canChangeTheme={false}
+                canChangeLanguage={false}
+
                 onClickLogo={onClickLogo}
                 onVmInit={onVmInit}
             />,
